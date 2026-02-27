@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        // 3. The Scroll Logic
+        window.addEventListener('scroll', () => {
+            // Calculate how far down the page the user has scrolled
+            const scrollTop = window.scrollY;
+            
+            // Calculate the maximum distance the user can scroll
+            const docHeight = document.body.offsetHeight;
+            const winHeight = window.innerHeight;
+            const maxScroll = docHeight - winHeight;
+            
+            // Get the scroll progress as a percentage (0 to 1)
+            const scrollPercent = scrollTop / maxScroll;
+            
+            // Map the percentage to the CSS background-position (0% to 100%)
+            const position = scrollPercent * 100;
+            
+            // Apply the new position to the body's background
+            document.body.style.backgroundPosition = `0% ${position}%`;
+        });
+    </script>
+    <nav>
+        <div class="nav-content">
+            <img src="https://i.pinimg.com/736x/20/df/35/20df35ca3fdc83de57cc6869fe7410e6.jpg">
+            <h2>Sam's Corner</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact (don't)</a></li>
+                <a href="music.html">Music</a>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero hidden">
+        <h1><span>Samuel Olinsky</span></h1>
+        <h2>Second Year <span class="accent">Computer Science</span> student at Eduvos</h2>
+        <br>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    
+    <section id="projects" class="section-container hidden">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h3>Assembly hell</h3>
+                <p>Barely functional platformer in x86 Assembly.</p>
+                <a href="https://github.com/BossaDino/Assembly-Platformer/" target="_blank" rel="noopener noreferrer" class="btn-small">GitHub Repo</a>
+            </div>
+            <div class="card">
+                <h3>Flower Generator</h3>
+                <p>3D Flower Generator in C++. Made as a gesture.</p>
+                <a href="#" class="btn-small">Useless Button</a>
+            </div>
+            <div class="card">
+                <h3>This Portfolio</h3>
+                <p>Learning as I go</p>
+                <a href="https://github.com/BossaDino/Assembly-Platformer/" target="_blank" rel="noopener noreferrer" class="btn-small">GitHub Repo</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills" class="section-container hidden">
+        <h2 class="section-title">My Skills</h2>
+        <ul class="skills-list">
+            <li>C++</li>
+            <li>Advanced Networking</li>
+            <li>API Development</li>
+            <li>C#</li>
+            <li>Git & GitHub</li>
+            <li>HTML & CSS</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="section-container hidden">
+        <h2 class="section-title">Get In Touch</h2>
+        <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, send a message below and I'll get back to you!</p>
+        
+        <form
+          action="https://formspree.io/f/mbdazyjb"
+          class="fs-form"
+          target="_top"
+          method="POST"
+        >
+        <br>
+          <div class="fs-field">
+            <label class="fs-label" for="name">Name</label>
+            <input class="fs-input" id="name" name="name" />
+          </div>
+          <div class="fs-field">
+            <label class="fs-label" for="email">Email</label>
+            <input class="fs-input" id="email" name="email" required />
+          </div>
+          <div class="fs-field">
+            <label class="fs-label" for="message">Message</label>
+            <textarea class="fs-textarea" id="message" name="message"></textarea>
+            <p class="fs-description">(Estimate Response Time: 48 Hours.)</p>
+          </div>
+          <div class="fs-button-group">
+            <button class="fs-button" type="submit">Send</button>
+          </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 02/2026 - Samuel Olinsky</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
