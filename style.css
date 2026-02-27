@@ -1,24 +1,21 @@
 :root {
-    /*--bg-color: #2e0303;*/
-    --surface-color: #5c0f0f;
-    --text-main: #cbcbcb;
-    --text-muted: #050007;
-    --accent: #070000;
-    --accent-hover: #000305;
-    --bg-colour: linear-gradient(
-                to bottom, 
-                #005392, 
-                #044401  
-            );
+  --surface-color: #124a3e;
+  --text-main: #cbcbcb;
+  --text-muted: #050007;
+  --accent: #070000;
+  --accent-hover: #000305;
+  --bg-colour: linear-gradient(
+              to bottom, 
+              #0f2027,
+              #2c5364  
+          );
 }
 
 
 .content {
-    /* Ensure content elements don't have their own opaque background */
-    background-color: transparent; 
-    /* Add styles for your actual content */
-    padding: 20px;
-    color: black;
+  background-color: transparent;
+  padding: 20px;
+  color: black;
 }
 
 * {
@@ -29,21 +26,14 @@
 }
 
 body {
-    font-family: "Lucida Console", "Courier New", monospace;;
-    /* Define your gradient colors here */
-            background: linear-gradient(
-                to bottom, 
-                #005392, 
-                #044401  
-            );
-            
-            /* Make the background 5 times taller than the viewport */
+    font-family: "Lucida Console", "Courier New", monospace;
+            background: var(--bg-colour);
+
             background-size: 100% 500%;
             
             /* Keep the background fixed in place so it doesn't scroll naturally */
             background-attachment: fixed;
-            
-            /* Start at the very top of the gradient */
+          
             background-position: 0% 0%;
     color: var(--text-main);
     line-height: 1.6;
@@ -58,7 +48,6 @@ body {
         
 }
 
-/* Navigation */
 nav {
     position: fixed;
     top: 0;
@@ -70,20 +59,14 @@ nav {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px); /* for wider browser support */
 
-    /* 3. Finishing touches */
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 20px;
 }
 
-nav img {
-  position:absolute;
-  margin-right: 1px;
-  left: 0;
-  height: 50px; /* Set a specific height for the emblem */
-  width: 100px; /* Maintain aspect ratio */
-  max-width: 10%; /* Ensure responsiveness */
+body img {
+  height: 500px; /*Filler image on music page*/
 }
 
 .nav-content {
@@ -214,7 +197,6 @@ nav a:hover {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px); /* for wider browser support */
   
-    /* 3. Finishing touches */
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 2px solid rgba(169, 169, 169, 0.2);
@@ -236,7 +218,6 @@ nav a:hover {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px); /* for wider browser support */
 
-    /* 3. Finishing touches */
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -252,7 +233,6 @@ nav a:hover {
     margin-top: 1rem;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
@@ -274,7 +254,6 @@ footer {
 
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-/** Variables **/
 
 :root {
   --color-background: #000000;
@@ -285,7 +264,7 @@ footer {
   --color-primary: #1e293b; 
   --color-primary-active: #000000;
   --color-text-default: #ffffff;
-  --color-text-muted: #475569;
+  --color-text-muted: #282828;
 
   --font-family-body: "Lucida Console", "Courier New", monospace;
   --font-family-display: "Lucida Console", "Courier New", monospace;
@@ -411,7 +390,7 @@ fieldset {
 }
 
 .fs-button {
-  background-color: #002800;
+  background-color: var(--surface-color);
   border-radius: 0.375rem;
   color: rgb(255, 255, 255);
   cursor: pointer;
@@ -649,25 +628,21 @@ fieldset {
 }
 
 #email {
-    /* Changes the color of the text the user types */
-    color: rgb(255, 255, 255); 
-    
-    /* Changes the background color of the input box */
-    background-color: rgb(0, 0, 0); 
+  /* Changes the color of the text the user types */
+  color: rgb(255, 255, 255); 
+
+  /* Changes the background color of the input box */
+  background-color: rgb(0, 0, 0); 
 }
 
 #message {
-    /* Changes the color of the text the user types */
-    color: rgb(255, 255, 255); 
-    
-    /* Changes the background color of the input box */
-    background-color: rgb(0, 0, 0); 
+  color: rgb(255, 255, 255); 
+  
+  background-color: rgb(0, 0, 0); 
 }
 
 #name {
-    /* Changes the color of the text the user types */
-    color: rgb(255, 255, 255); 
-    
-    /* Changes the background color of the input box */
-    background-color: rgb(0, 0, 0); 
+  color: rgb(255, 255, 255); 
+  
+  background-color: rgb(0, 0, 0); 
 }
